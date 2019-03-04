@@ -19,6 +19,7 @@
             android:layout_height="wrap_content" />
         <!--User-->
          <EditText
+             android:background="@drawable/user"
              android:inputType="text"
              android:hint="User"
              android:layout_width="match_parent"
@@ -26,12 +27,14 @@
 
         <!--Password-->
         <EditText
+            android:background="@drawable/user"
             android:inputType="textPassword"
             android:hint="Password :"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <!--Login-->
         <Button
+            android:background="@drawable/login"
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -48,61 +51,61 @@
             android:layout_height="wrap_content" />
 
         <!--button number-->
-    <LinearLayout
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:layout_margin="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-        <!--1-->
-        <TextView
-            android:onClick="true"
-            android:id="@+id/page1"
-            android:textColor="#002984"
-            android:textSize="20dp"
-            android:text="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <!--<LinearLayout-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_margin="40dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent">-->
+        <!--&lt;!&ndash;1&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:onClick="true"-->
+            <!--android:id="@+id/page1"-->
+            <!--android:textColor="#002984"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
-        <!--2-->
-        <TextView
-            android:onClick="true"
-            android:id="@+id/page2"
-            android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:text="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--&lt;!&ndash;2&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:onClick="true"-->
+            <!--android:id="@+id/page2"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
-        <!--3-->
-        <TextView
-            android:onClick="true"
-            android:id="@+id/page3"
-            android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:text="3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <!--4-->
-        <TextView
-            android:onClick="true"
-            android:id="@+id/page4"
-            android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:text="4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <!--5-->
-        <TextView
-            android:onClick="true"
-            android:id="@+id/page5"
-            android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:text="5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <!--&lt;!&ndash;3&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:onClick="true"-->
+            <!--android:id="@+id/page3"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--&lt;!&ndash;4&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:onClick="true"-->
+            <!--android:id="@+id/page4"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--&lt;!&ndash;5&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:onClick="true"-->
+            <!--android:id="@+id/page5"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
  </LinearLayout>
 
 </FrameLayout>
