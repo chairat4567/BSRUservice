@@ -6,14 +6,22 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class RegsiterFragment extends Fragment {
+
+    private boolean aBoolean = true;
+    private String genderString;
 
 
     public RegsiterFragment() {
@@ -34,12 +42,81 @@ public class RegsiterFragment extends Fragment {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().popBackStack(); 
+                getActivity().getSupportFragmentManager().popBackStack();
+            }
+        });
+        setHasOptionsMenu(true);
+
+//        Gender Controller
+        RadioGroup radioGroup = getView().findViewById(R.id.ragGender);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                aBoolean = false;
+                switch (i) {
+                    case R.id.radmale:
+                    genderString = "male";
+                    break;
+                    case R.id.radFemale:
+                    genderString = "Female";
+                    break;
+                }
             }
         });
 
+
     } //Main Method
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.itemUPload) {
+
+            chackValueAndUpload();
+
+
+        } //if
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void chackValueAndUpload() {
+//        Get Value From EditText
+        EditText nameEditText = getView().findViewById(R.id.edtName);
+        EditText userEditText = getView().findViewById(R.id.edtUser);
+        EditText passEditText = getView().findViewById(R.id.edtPassword);
+
+        String name = nameEditText.getText().toString().trim();
+        String user = userEditText.getText().toString().trim();
+        String password = passEditText.getText().toString().trim();
+
+        MyAlert myAlert = new MyAlert(getActivity());
+
+        if (name.isEmpty() || user.isEmpty() || password.isEmpty()) {
+//             Have space
+            myAlert.normalDialog("Have Space","Please Fill All Blank");
+        } else if (aBoolean) {
+            myAlert.normalDialog("No Gender","Please choose Gender");
+        } else {
+
+            
+
+
+        }
+
+
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+
+        inflater.inflate(R.menu.menu_register,menu);
+
+
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
